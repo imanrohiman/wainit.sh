@@ -1,0 +1,2 @@
+# wainit.sh
+titip
