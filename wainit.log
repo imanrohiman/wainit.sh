@@ -1,6 +1,7 @@
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* About to connect() to bizmsgapi.ada-asia.com port 443 (#0)
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0* About to connect() to bizmsgapi.ada-asia.com port 443 (#0)
 *   Trying 52.77.218.144...
 * Connected to bizmsgapi.ada-asia.com (52.77.218.144) port 443 (#0)
 * Initializing NSS with certpath: sql:/etc/pki/nssdb
@@ -12,32 +13,56 @@
 * 	expire date: Dec 22 11:51:29 2021 GMT
 * 	common name: bspapi.apptest.space
 * 	issuer: CN=R3,O=Let's Encrypt,C=US
-> POST /prod/coreapp HTTP/1.1
-> User-Agent: curl/7.29.0
-> Host: bizmsgapi.ada-asia.com
-> Accept: */*
-> Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRJZCI6IkFEQSIsImVtYWlsIjoiaW5mcmFAYWRhYnNwLmNvbSIsImV4cCI6MjI2NjI4Njk1NSwiaWF0IjoxNjM1MTM0OTU1LCJuYW1lIjoiaW5mcmEiLCJyb2xlQ29kZSI6IklORlJBIiwicm9sZUlkIjoiSU5GUkEiLCJzaWQiOiJhYmQ1NzhmZS05NzY5LTQ1MDEtYmJlYS0xZDVkZDBiYTI2NWUiLCJ1aWQiOiIxOWJjNDY4ZS00ZDQzLTQ5MWItOTJjMS04ODIxMWMzNTRjMjIifQ.m0923Cr-MubNiARvt2QfhjXNRytKbeqRDwpp_NMoYnc
-> Content-Type: application/json
-> Content-Length: 61
-> 
+> POST /prod/coreapp HTTP/1.1
+
+> User-Agent: curl/7.29.0
+
+> Host: bizmsgapi.ada-asia.com
+
+> Accept: */*
+
+> Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRJZCI6IkFEQSIsImVtYWlsIjoiaW5mcmFAYWRhYnNwLmNvbSIsImV4cCI6MjI2NjI4Njk1NSwiaWF0IjoxNjM1MTM0OTU1LCJuYW1lIjoiaW5mcmEiLCJyb2xlQ29kZSI6IklORlJBIiwicm9sZUlkIjoiSU5GUkEiLCJzaWQiOiJhYmQ1NzhmZS05NzY5LTQ1MDEtYmJlYS0xZDVkZDBiYTI2NWUiLCJ1aWQiOiIxOWJjNDY4ZS00ZDQzLTQ5MWItOTJjMS04ODIxMWMzNTRjMjIifQ.m0923Cr-MubNiARvt2QfhjXNRytKbeqRDwpp_NMoYnc
+
+> Content-Type: application/json
+
+> Content-Length: 61
+
+> 
+
 } [data not shown]
 * upload completely sent off: 61 out of 61 bytes
-< HTTP/1.1 200 OK
-< Server: nginx/1.20.0
-< Date: Mon, 25 Oct 2021 17:32:14 GMT
-< Content-Type: application/json; charset=UTF-8
-< Content-Length: 152
-< Connection: keep-alive
-< Access-Control-Allow-Origin: *
-< Vary: Origin
-< 
+< HTTP/1.1 200 OK
+
+< Server: nginx/1.20.0
+
+< Date: Mon, 25 Oct 2021 17:32:14 GMT
+
+< Content-Type: application/json; charset=UTF-8
+
+< Content-Length: 152
+
+< Connection: keep-alive
+
+< Access-Control-Allow-Origin: *
+
+< Vary: Origin
+
+< 
+
 { [data not shown]
-100   213  100   152  100    61    200     80 --:--:-- --:--:-- --:--:--   201
+
+100   213  100   152  100    61    200     80 --:--:-- --:--:-- --:--:--   201
 * Connection #0 to host bizmsgapi.ada-asia.com left intact
 {"status":200,"errorCode":0,"message":"Success","data":{"id":"da70b95f-8c2f-4a3a-a7ad-cb49ee3a694c","platform":"WA","ip":"192.168.19.119","port":9090}}
-Recreating biz_wacore_1 ... 
-[1A[2KRecreating biz_wacore_1 ... [32mdone[0m[1BRecreating biz_waweb_1  ... 
-[1A[2KRecreating biz_waweb_1  ... [32mdone[0m[1BCONTAINER ID   IMAGE                                 COMMAND                  CREATED          STATUS         PORTS                                     NAMES
+Recreating biz_wacore_1 ... 
+
+[1A[2K
+Recreating biz_wacore_1 ... [32mdone[0m
+[1BRecreating biz_waweb_1  ... 
+
+[1A[2K
+Recreating biz_waweb_1  ... [32mdone[0m
+[1BCONTAINER ID   IMAGE                                 COMMAND                  CREATED          STATUS         PORTS                                     NAMES
 55b760d3db5c   docker.whatsapp.biz/web:v2.35.4       "/opt/whatsapp/bin/w…"   5 seconds ago    Up 1 second    0.0.0.0:9090->443/tcp, :::9090->443/tcp   biz_waweb_1
 452486d6d09d   docker.whatsapp.biz/coreapp:v2.35.4   "/opt/whatsapp/bin/w…"   11 seconds ago   Up 5 seconds   6250-6253/tcp                             biz_wacore_1
 ###
@@ -50,7 +75,7 @@ WA_DB_ENGINE=PGSQL
 WA_DB_HOSTNAME=wadbcoreprod.cbdq96j9iuvs.ap-southeast-1.rds.amazonaws.com
 WA_DB_PORT=5432
 WA_DB_USERNAME=postgres
-WA_DB_PASSWORD=Tdwf4f9586sQmGRb
+WA_DB_PASSWORD=
 WA_DB_NAME_PREFIX=prod21102519210_
 WA_DB_CONNECTION_IDLE_TIMEOUT=180000
 ###
